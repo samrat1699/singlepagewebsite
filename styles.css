@@ -6,25 +6,27 @@ body {
     background: linear-gradient(to right, #00c6ff, #0072ff);
     /* Sea-water gradient */
     color: white;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
 }
 
 /* Navbar Styling */
 nav {
     background-color: rgba(0, 0, 0, 0.9);
-    /* Dark transparent background */
     padding: 20px 0;
     display: flex;
     justify-content: center;
-    /* Center the navbar items */
     align-items: center;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-    /* Soft shadow */
     transition: background-color 0.3s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 
 nav:hover {
     background-color: rgba(0, 0, 0, 0.8);
-    /* Darken on hover */
 }
 
 /* Navbar List */
@@ -34,36 +36,28 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
-    /* Center the navbar items */
 }
 
 nav ul li {
     margin: 0 20px;
 }
 
-/* Navbar Buttons */
 nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 20px;
     padding: 12px 20px;
     background: linear-gradient(to right, #0072ff, #00c6ff);
-    /* Blue gradient */
     border-radius: 25px;
-    /* Rounded button shape */
-    transition: all 0.3s ease-in-out;
     font-weight: bold;
     display: inline-block;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Hover Effect */
 nav ul li a:hover {
     background: linear-gradient(to right, #ffcc00, #ff9900);
-    /* Yellow-orange gradient */
     transform: scale(1.1);
-    /* Slight zoom effect */
     box-shadow: 0 8px 25px rgba(255, 165, 0, 0.5);
-    /* Soft glow */
 }
 
 /* Search Box */
@@ -76,7 +70,6 @@ nav ul li a:hover {
 
 .search-box:hover {
     transform: scale(1.1);
-    /* Zoom effect */
 }
 
 .search-box input {
@@ -135,9 +128,7 @@ nav ul li a:hover {
 #home-content h1:hover,
 #home-content p:hover {
     transform: translateY(-5px);
-    /* Slight lift effect */
     color: #ffcc00;
-    /* Golden color on hover */
 }
 
 @keyframes fadeIn {
@@ -310,6 +301,10 @@ nav ul {
         background: linear-gradient(to right, #00c6ff, #0072ff);
     }
 
+    nav {
+        padding: 15px 0;
+    }
+
     nav ul li {
         margin: 0 10px;
     }
@@ -341,5 +336,40 @@ nav ul {
     #conference-list {
         width: 90%;
         padding: 30px;
+    }
+}
+
+/* Extra Small Screens (Phones) */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    #home-content {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    #home-content h1 {
+        font-size: 20px;
+    }
+
+    #home-content p {
+        font-size: 12px;
+    }
+
+    #about {
+        width: 95%;
+        padding: 30px;
+    }
+
+    #conference-list {
+        width: 95%;
+        padding: 25px;
+    }
+
+    #conference-list ul li {
+        font-size: 16px;
     }
 }
