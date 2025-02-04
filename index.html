@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" id="home-link" onclick="showHome()">Home</a></li>
+            <li><a href="#" id="about-link" onclick="showAbout()">About</a></li>
+            <li><a href="#" id="national-link" onclick="showNationalConference()">National Conference</a></li>
+            <li><a href="#" id="international-link" onclick="showInternationalConference()">International Conference</a>
+            </li>
+        </ul>
+        <div class="search-box">
+            <input type="text" id="search" placeholder="Search...">
+            <button onclick="searchFunction()">🔍</button>
+        </div>
+    </nav>
+
+    <!-- Content Sections -->
+    <section id="home-content">
+        <h1>Welcome to Our Conference Website</h1>
+        <p>Explore national and international conferences.</p>
+    </section>
+
+    <section id="about" class="hidden">
+        <h2>About Us</h2>
+        <p>Welcome to the premier platform for discovering and participating in national and international
+            conferences...</p>
+    </section>
+
+    <section id="conference-list" class="hidden">
+        <h2>Conference List</h2>
+        <ul id="list"></ul>
+    </section>
+
+    <section id="back-section" class="hidden">
+        <button id="backButton" onclick="goBack()">Back</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
